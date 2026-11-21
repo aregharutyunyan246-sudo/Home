@@ -10,14 +10,18 @@ void main() {
   );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Իմ պրոֆիլը'),
         centerTitle: true,
       ),
       body: Padding(
@@ -36,7 +40,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            Text(
+            const Text(
               'Արեգ Հարությունյան',
               style: TextStyle(
                 fontSize: 24,
@@ -44,7 +48,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
             SizedBox(height: 8),
-            Text(
+            const Text(
               'Flutter սովորող',
               style: TextStyle(
                 fontSize: 16,
@@ -56,7 +60,7 @@ class MyApp extends StatelessWidget {
               children: [
                 Icon(Icons.email, color: Colors.blue),
                 SizedBox(width: 15),
-                Text('areg@gmail.com'),
+                const Text('areg@gmail.com'),
               ],
             ),
             SizedBox(height: 35),
@@ -64,7 +68,7 @@ class MyApp extends StatelessWidget {
               children: [
                 Icon(Icons.phone, color: Colors.green),
                 SizedBox(width: 15),
-                Text('+374 99 123456'),
+                const Text('+374 99 123456'),
               ],
             ),
             SizedBox(height: 35),
@@ -72,7 +76,7 @@ class MyApp extends StatelessWidget {
               children: [
                 Icon(Icons.location_city, color: Colors.red),
                 SizedBox(width: 15),
-                Text('Երևան'),
+                const Text('Երևան'),
               ],
             ),
           ],
