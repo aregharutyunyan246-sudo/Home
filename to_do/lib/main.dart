@@ -25,7 +25,6 @@ class _MyPageState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('To-Do'),
       ),
       body: Column(
         children: [
@@ -44,7 +43,7 @@ class _MyPageState extends State<MyApp> {
                 });
               }
             },
-            child: Text('Ավելացնել'),
+            child: const Text('Ավելացնել'),
           ),
           Expanded(
             child: ListView.builder(
